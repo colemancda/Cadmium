@@ -1,0 +1,10 @@
+#!/bin/false
+
+# Samsung Chromebook Plus (kevin), RK3399 gru family.
+# The directory name is matched against the device tree's "compatible"
+# string (google,kevin-revN) by fs/install.
+# arch missing? go to baseboard/$BASEBOARD/boardinfo
+
+export BASEBOARD=gru
+export BOARD=kevin
+export TYPE=laptop

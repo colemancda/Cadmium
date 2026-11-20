@@ -96,7 +96,7 @@ else
 fi
 
 # Wi-Fi is optional: wired (USB ethernet) is fine, and not every kernel has a driver for the radio
-if nmcli -t -f TYPE device | grep -qx wifi; then
+if ! nm-online -q -t 5 && nmcli -t -f TYPE device | grep -qx wifi; then
 	nmcli device wifi rescan || true
 	sleep 4 # wait for wifi networks
 	nmtui connect
@@ -234,7 +234,7 @@ if [ $INSTMED != this ]; then
 		;;
 	esac
 
-	mount $ROOTPART /mnt
+	mount -t "$FILESYSTEM" $ROOTPART /mnt
 	export DESTDIR=/mnt
 
 	if [ "$ROOTFS" = "arch" ]; then
