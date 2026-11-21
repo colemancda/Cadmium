@@ -1,0 +1,16 @@
+--- a/sound/soc/rockchip/rk3399_gru_sound.c	2026-11-21 00:48:29.564614130 -0500
++++ b/sound/soc/rockchip/rk3399_gru_sound.c	2026-11-21 00:48:29.564614130 -0500
+@@ -558,7 +558,12 @@
+ 		dai = &card->dai_link[card->num_links++];
+ 		*dai = rockchip_dais[index];
+ 
+-		if (!dai->codecs->name)
++		/*
++		 * The RT5514 DSP link uses COMP_DUMMY(), a zero-length codec
++		 * array that is filled in at card registration. Writing through
++		 * dai->codecs there would land on the next object in memory.
++		 */
++		if (dai->num_codecs && !dai->codecs->name)
+ 			dai->codecs->of_node = np_codec;
+ 		dai->platforms->of_node = np_cpu;
+ 		dai->cpus->of_node = np_cpu;
