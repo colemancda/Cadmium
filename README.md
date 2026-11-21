@@ -26,7 +26,7 @@ Thanks @LoganMD for the logo
 | Commercial name          | Codename       |  SOC     | Pen input | Internal Installation  | WiFi | Bluetooth | Audio | Suspend/Resume | Notes                             |
 | ------------------------ | -------------- | -------- | --------- | ---------------------- | ---- | --------- | ----- | -------------- | --------------------------------- |
 | Asus Chromebook C100PA   | veyron-minnie  | RK3288   | N/A       | ?                      | ?    | ?         | ?     | Y              |                                   |
-| Samsung Chromebook Plus  | gru-kevin      | RK3399   | ?         | ?                      | ?    | ?         | ?     | Y              | Libreboot available               |
+| Samsung Chromebook Plus  | gru-kevin      | RK3399   | ?         | Y                      | Y    | Y         | Y     | Y              | Libreboot available, touchscreen Y, speaker Y |
 | Lenovo Chromebook S330   | elm-hana       | MT8173   | N/A       | ?                      | ?    | ?         | ?     | Y              |                                   |
 | Lenovo Chromebook Duet   | kukui-krane    | MT8183   | ?         | Y                      | Y    | ?         | Y     | Y              |                                   |
 | Acer Chromebook Spin 513 | trogdor-lazor  | SC7180   | ?         | Y                      | Y    | ?         | Y     | Y              | Manual audio switching required   |
